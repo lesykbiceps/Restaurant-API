@@ -269,7 +269,7 @@ class EmployeeModel(base):
     name = Column(String(30), nullable=False)
     username = Column(String(30), nullable=False)
     email = Column(String(30), nullable=False)
-    hashed_password = Column(String(50), nullable=False)
+    hashed_password = Column(String(150), nullable=False)
     is_admin = Column(Boolean(), default=False)
     votes = relationship(VoteModel, lazy='dynamic',
                            cascade="all, delete-orphan",

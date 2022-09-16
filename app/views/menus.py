@@ -47,7 +47,9 @@ def get_menus():
 @jwt_required()
 def get_menu():
     result = MenuModel.return_all()
-    today = max(result, key=lambda x: x['number_votes'])
+    today = []
+    if result:
+        today = max(result, key=lambda x: x['number_votes'])
     return jsonify(today)
 
 

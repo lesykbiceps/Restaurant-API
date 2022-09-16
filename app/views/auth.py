@@ -3,7 +3,7 @@ from flask_jwt_extended import (
     create_access_token, create_refresh_token, get_jwt,
     jwt_required, get_jwt_identity, get_current_user, current_user)
 
-from app.models import EmployeeModel, RevokedTokenModel
+from app.models import EmployeeModel, RevokedTokenModel, session
 
 auth_bp = Blueprint('auth', __name__)
 
